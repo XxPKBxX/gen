@@ -1,45 +1,38 @@
-div.button {
-    width: 200px;
-    height: 50px;
-
-    cursor: pointer;
-
-    border-radius: 50px;
-    background-color: white;
-    color: black;
-
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-
-    margin: auto;
-    margin-top: -20px;
-    
-    box-shadow: 0px 10px 30px -5px gray;
-    
-    -ms-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+body {
+	background-color: black;
+	color: white;
 }
-div.button:hover {
-    width: 250px;
-    height: 50px;
 
-    background-color: black;
-    color: white;
-
-    -ms-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+.button {
+	display: block;
+	width: 200px;
+	height: 50px;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50px;
+	background-color: black;
+	color: white;
+	border-bottom: solid 2px white;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	text-decoration: none;
+	margin: auto;
+	margin-top: -20px;
+	-ms-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
-div.button a {
-    text-decoration: none;
-    color: black;
-    line-height: 45px;
-    
-    width: 200px;
-    height: 50px;
+
+.button:hover {
+	width: 250px;
+	height: 50px;
+	background-color: white;
+	color: black;
+	-ms-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
