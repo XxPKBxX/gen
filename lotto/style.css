@@ -1,0 +1,153 @@
+:root {
+    --background-color: black;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: var(--background-color);
+    color: white;
+    font-family: "Noto Sans KR";
+    text-align: center;
+}
+.navbar {
+    position: fixed;
+    background: rgb(31,86,122);
+    background: linear-gradient(90deg, #2a1750, #094577);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    transition: all 0.3s;
+    z-index: 100;
+    border-bottom: solid 2px white;
+}
+.navbar p {
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+}
+a.button {
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    border-radius: 100px;
+    background-color: white;
+    user-select: none;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+a.button:hover {
+    opacity: 0.8;   
+}
+#old {
+    margin-left: 120px;
+    margin-top: -25px;
+}
+.noscript {
+    position: fixed;
+    background-color: rgb(255, 208, 0);
+    margin-top: 50px;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px -3px 30px 0px rgba(255, 208, 0, 0.692);
+}
+.noscript p {
+    margin-left: 10px;
+}
+.exclude {
+    margin-top: 60px;
+}
+#exclude {
+    font-size: 25px;
+    font-weight: bold;
+}
+.ex {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    user-select: none;
+    cursor: pointer;
+    background: none;
+    background-size: none;
+    background-color: white;
+    color: var(--background-color);
+    transition: all 0.3s;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 3s ease infinite;
+}
+.ex:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+#select_buttons {
+    display: inline-block;
+}
+#select_buttons a {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.lottogen {
+    margin-top: -5px;
+}
+.lottogen a {
+    background-color: rgb(65, 104, 231);
+    color: white;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.lottolist {
+    margin-top: 5px;
+    height: auto;
+}
+.ballParent {
+    display: inline-block;
+    margin-top: 5px;
+}
+.ball {
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 5px;
+    user-select: none;
+}
+#movetoTop {
+    position: fixed;
+    background-color: white;
+    width: 722px;
+    height: 722px;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: right;
+    display: inline-block;
+}
