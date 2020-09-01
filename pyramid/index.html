@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>피라미드 댓글 생성기</title>
+        <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body style="font-family: Noto Sans KR, sans-serif; font-weight: normal; text-align: center;">
+        <p style="font-family: Black Han Sans, sans-serif; font-size: 45px; margin-top: 15px; letter-spacing: -4px;" id="title">피라미드 댓글 생성기</p>
+        <div style="width: 1000px; height: 500px; margin: auto;" id="parent" onmouseover="this.style['boxShadow'] = '0px 10px 30px -10px gray';" onmouseout="this.style['boxShadow'] = '';">
+            <div>
+                <input type="text" id="prefix" placeholder="접두사" style="margin-top: 10px;" maxlength="5">
+                <input type="text" id="suffix" placeholder="접미사" style="margin-top: 10px;" maxlength="5">
+            </div>
+            <div>
+                <input type="text" id="sentence" placeholder="문장" style="margin-top: 5px; width: 500px;" maxlength="50">
+            </div>
+            <input type="button" id="generate" disabled="" value="생성" style="margin-top: 5px; width: 50px;" onclick="generate(this, false)" onmouseover="this.style['boxShadow'] = '0px 10px 10px -1px lightgray';" onmouseout="this.style['boxShadow'] = '';">
+            <input type="button" id="generateReverse" disabled="" value="삼각형 모양으로 생성" style="margin-top: 5px; width: 130px;" onclick="generate(this, true)" onmouseover="this.style['boxShadow'] = '0px 10px 10px -1px lightgray';" onmouseout="this.style['boxShadow'] = '';">
+            <div style="margin: auto; margin-top: 10px; border: thick dotted gray; width: 950px; height: 360px; overflow: scroll; text-align: left;">
+                <div style="resize: none; margin-left: 20px; margin-top: 20px; width: 860px; height: 310px;" id="generated">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
