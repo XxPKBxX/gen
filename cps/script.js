@@ -1,47 +1,56 @@
-document.getElementById("generate").disabled = "";
-document.getElementById("generateReverse").disabled = "";
+var started = false;
+var clicks = 0;
+var acCheck = 0;
+var stopwatch = 0;
 
-function generate(obj, reversed) {
-    document.getElementById("generate").disabled = "true";
-    document.getElementById("generateReverse").disabled = "true";
-
-    var sentence = document.getElementById("sentence").value;
-    var prefix = document.getElementById("prefix").value;
-    var suffix = document.getElementById("suffix").value;
-
-    document.getElementById("generated").innerText = "";
-
-    for (var i = 0; i < sentence.length; i++) {
-        var answer = ""
-        var toAdd = sentence.substring(0, i + 1);
-
-        if (sentence.substring(i, i + 1) != " ") {
-            if (prefix != "") answer += prefix;
-
-            answer += toAdd;
-
-            if (suffix != "") answer += suffix;
-
-            document.getElementById("generated").innerText += answer + "\n";
+window.onload = function() {
+    window.addEventListener("mousedown", function(e) {
+        if (started == true) {
+            clicks++;
+            countdown.innerHTML = "클릭 수: " + clicks;
+            e.preventDefault();
         }
+    }, true);
+}
+
+async function cd() {
+    document.getElementById("acWarn").style.opacity = 0;
+    const countdown = document.getElementById("countdown");
+    const obj = document.getElementById("start");
+    const sw = document.getElementById("stopwatch");
+    obj.disabled = true;
+    countdown.removeAttribute("hidden");
+    for (var i = 2; i >= 0; i--) {
+        countdown.innerHTML = (i + 1) + "초 후 측정 시작";
+        await sleep(1000);
     }
-    if (reversed == true) {
-        for (var i = sentence.length; i >= 0; i--) {
-            var answer = ""
-            var toAdd = sentence.substring(0, i + 1);
+    started = true;
+    stopwatch = 0;
+    acCheck = 0;
+    clicks = 0;
+    countdown.innerHTML = "클릭 수: 0";
+    while (stopwatch <= 9000) {
+        stopwatch += 5;
 
-            if (sentence.substring(i, i + 1) != " " && toAdd != sentence) {
-                if (prefix != "") answer += prefix;
-
-                answer += toAdd;
-
-                if (suffix != "") answer += suffix;
-
-                document.getElementById("generated").innerText += answer + "\n";
+        if (stopwatch / 1000 == parseInt(stopwatch / 1000)) {
+            if (clicks - acCheck >= 40) {
+                document.getElementById("acWarn").style.opacity = 1;
             }
+            acCheck = clicks;
         }
-    }
 
-    document.getElementById("generate").disabled = "";
-    document.getElementById("generateReverse").disabled = "";
+        var remain = (10000 - stopwatch) / 1000;
+        if (remain != Math.round(remain)) sw.innerHTML = parseInt(remain).toString() + "." + (remain).toString().split(".")[1].substr(0, 1);
+        else sw.innerHTML = parseInt(remain).toString() + ".0";
+        await sleep(1);
+    }
+    sw.innerHTML = "";
+    started = false;
+    if (clicks >= 1) countdown.innerHTML = (clicks / 10) + " CPS";
+    else countdown.innerHTML = "0 CPS";
+    obj.removeAttribute("disabled");
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
 }
