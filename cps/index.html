@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CPS 측정기</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="og:title" content="CPS 측정기">
+        <meta name="og:description" content="여러분의 손은 얼마나 빠른가요? CPS를 측정해 보세요.">
+        <meta name="og:image" content="https://i.ibb.co/R2xXvZD/favicon.png">
+        <meta name="og:url" content="http://lotto.gen.kro.kr">
+        <meta name="theme-color" content="#f49555">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body oncontextmenu="return false;" onkeydown="return false;">
+        <div class="nav">
+            <p style="margin-top: 5px; margin-left: 10px; font-weight: bolder;">CPS 측정기</p>
+        </div>
+        <p style="color: red; font-weight: bolder; opacity: 0;" id="acWarn">오토클릭을 사용하고 계신가요?</p>
+        <div>
+            <p>10초 동안 마우스를 클릭하고 난 뒤</br>CPS를 측정합니다.</p>
+            <p style="font-weight: bolder; margin-top: -10px;">아래 측정하기 버튼을 누른 뒤 사이트 내 아무 곳이나 클릭하세요!</p>
+            <button style="margin-top: -10px;" id="start" onclick="cd();">측정하기</button>
+            <p id="countdown" style="font-style: italic;" hidden>3초 후 측정을 시작합니다</p>
+            <p id="stopwatch"></p>
+            <p id="yee"></p>
+        </div>
+    </body>
+</html>
