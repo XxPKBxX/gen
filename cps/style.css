@@ -1,3 +1,7 @@
+html {
+    filter: invert();
+}
+
 body {
     text-align: center;
     font-family: 'Noto Sans KR';
