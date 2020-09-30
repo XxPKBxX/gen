@@ -36,8 +36,7 @@ async function start(obj) {
     setTimeout(function() {
         var howmany = 0;
         var margin = 0;
-        document.getElementsByClassName("timer")[0].style.backgroundColor = "rgb(90, 252, 90)";
-        document.getElementsByClassName("timer")[0].style.boxShadow = "0px 3px 15px 0px rgb(63, 255, 63)";
+        document.getElementsByClassName("timer")[0].style.marginLeft = "0%";
         const loading = setInterval(function() {
             howmany += 1;
             margin -= 10;
