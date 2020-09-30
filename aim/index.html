@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>에임 연습장</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="og:title" content="에임 연습장">
+        <meta name="og:description" content="움직이는 원을 잡아보세요.">
+        <meta name="og:image" content="https://github.com/XxPKBxX/gen/blob/master/aim/logo.png?raw=true">
+        <meta name="og:url" content="https://xxpkbxx.github.io/gen/aim">
+        <meta name="theme-color" content="#f49555">
+    </head>
+    <body onload="setting();">
+        <noscript><meta http-equiv="refresh" content="0; url=/noscript.html"></noscript>
+        <div class="timer"></div>
+        <div class="circle" onclick="shot();"></div>
+        <button class="start" onclick="start(this);">연습 시작</button>
+        <p class="count" onclick="shot();"></p>
+        <div class="result" hidden>
+            <div class="result_content">
+                <p style="font-weight: bolder; font-size: 25px; line-height: 60px; color: black;">연습 종료</p>
+                <p class="result_text">평균 반응 속도: 0초<br>정확도: 0% (0개 중 0개)</p>
+                <button class="result_close" onclick="document.getElementsByClassName('result')[0].hidden = 'true';">닫기</button>
+            </div>
+        </div>
+    </body>
+</html>
