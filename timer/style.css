@@ -1,0 +1,198 @@
+:root {
+    --background-color: black;
+    --text-color: white;
+}
+* {
+    transition: all 0.3s;
+    color: var(--text-color);
+}
+body {
+    background-color: var(--background-color);
+    font-family: "Noto Sans KR";
+    overflow: hidden;
+}
+.darkCheck {
+    display: block;
+    position: fixed;
+    background-color: rgb(39, 39, 39);
+    width: 60px;
+    height: 30px;
+    border-radius: 100px;
+}
+.checkCircle {
+    display: block;
+    position: fixed;
+    background-color: rgb(72, 255, 72);
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    z-index: 1000;
+    margin-top: -1px;
+    opacity: 1;
+    box-shadow: 0px 0px 20px -2px rgb(72, 255, 72);
+    cursor: pointer;
+}
+.checkCircle:hover {
+    box-shadow: none;
+    filter: grayscale(0.5);
+}
+.clock {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20vw;
+    font-family: "Montserrat";
+    user-select: none;
+    text-align: left;
+    z-index: 2;
+    opacity: 0;
+    animation-name: didntstart;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes didntstart {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.clockBack {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 80, 80);
+    border-radius: 100%;
+    z-index: 1;
+}
+.clickscreen {
+    position: absolute;
+    display: block;
+    bottom: -50px;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-bottom: solid 3px rgb(255, 80, 80);
+}
+.setting {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+#settingTitle {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 5px;
+}
+#settingSection {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    display: block;
+    margin-top: -40px;
+}
+input {
+    border-radius: 100px;
+    outline: none;
+    border: solid 2px var(--text-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+input:focus {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: solid 2px var(--background-color);
+    transform: translateY(-3px);
+}
+.scrolldown {
+    position: fixed;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 300px;
+    text-align: center;
+    height: auto;
+    border-radius: 100px;
+    top: 5px;
+    right: 5px;
+    border: solid 2px var(--text-color);
+    user-select: none;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+button {
+    border-radius: 100px;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    border: solid 2px var(--text-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    user-select: none;
+}
+button:enabled:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: solid 2px var(--background-color);
+}
+button:disabled {
+    opacity: 0.5;
+}
+.required {
+    display: block;
+    background-color: var(--text-color);
+    color: red;
+    text-align: center;
+    width: 300px;
+    border-radius: 5px;
+    border: solid 2px red;
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    user-select: none;
+    margin: auto;
+    margin-top: 2px;
+}
+@keyframes blink {
+    0% {
+        border: solid 2px red;
+        color: red;
+    }
+    50% {
+        border: solid 2px black;
+        color: black;
+    }
+    100% {
+        border: solid 2px red;
+        color: red;
+    }
+}
+.copyright {
+    position: absolute;
+    line-height: 100px;
+    background: var(--background-color);
+    background: linear-gradient(0deg, var(--background-color) 0%, rgba(0,0,0,0) 100%);
+    width: 100%;
+    height: 130px;
+    color: var(--text-color);
+    bottom: 0px;
+}
+.copyright strong {color: var(--text-color);}
