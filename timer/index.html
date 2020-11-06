@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>타이머</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="og:title" content="타이머">
+        <meta name="og:description" content="타이머입니다.">
+        <meta name="og:image" content="https://i.ibb.co/M59FsGG/icon.png">
+        <meta name="og:url" content="https://xxpkbxx.github.io/gen/clock">
+        <meta name="theme-color" content="#f49555">
+    </head>
+    <body>
+        <noscript><meta http-equiv="refresh" content="0; url=/noscript.html"></noscript>
+        <div class="scrolldown" onclick="removePopup();">스크롤해서 타이머를 설정하세요.<br>클릭해서 창을 없앱니다.<br><span style="color:red;font-weight:bolder;">모바일은 사용할 수 없습니다!</span></div>
+        <span class="darkCheck"><span class="checkCircle" onclick="darkorlight();"></span></span>
+        <span class="clock">0:00:00</span>
+        <span class="clickscreen">화면을 터치해 알람을 해제하세요.</span>
+        <div class="clockBack"></div>
+        <div class="setting">
+            <p id="settingTitle">설정</p>
+            <span id="settingSection"><input class="times" type="number" min="0" max="24" value="0">시간 <input class="times" type="number" min="0" max="59" value="0">분 <input class="times" type="number" min="0" max="59" value="0">초 후 알림</span>
+            <button id="start" onclick="start();">시작</button>
+            <button id="stop" onclick="doing=2;start();" disabled>멈추기</button>
+            <span class="required">모든 항목이 0이 될 수 없습니다.<br>항목을 채워주세요.</span>
+            <div class="copyright">Alarm sound made by <strong>Microsoft</strong></div>
+        </div>
+        <audio id="alarm" src="alarm.mp3" hidden></audio>
+    </body>
+</html>
