@@ -181,7 +181,11 @@ function ended() {
         document.getElementById("alarm").loop = true;
         document.getElementById("alarm").play();
         doing = 4;
-        if (havedone == 1) document.getElementsByClassName("clickscreen")[0].style.bottom = "30px";
+        if (havedone == 1) {
+            var clickscreen = document.getElementsByClassName("clickscreen")[0];
+            clickscreen.style.bottom = "50px";
+            clickscreen.style.opacity = "1";
+        }
     },1000,true);
 }
 function fuckit() {
@@ -189,7 +193,9 @@ function fuckit() {
 
     doing = 2
     start();
-    document.getElementsByClassName("clickscreen")[0].style.bottom = "-50px";
+    var clickscreen = document.getElementsByClassName("clickscreen")[0];
+    clickscreen.style.bottom = "-100px";
+    clickscreen.style.opacity = "0";
     document.getElementById("alarm").loop = false;
     document.getElementById("alarm").pause();
     document.getElementById("alarm").currentTime = 0;
