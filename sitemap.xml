@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url><loc>https://gen.kro.kr/</loc><changefreq>always</changefreq><priority>1.00</priority></url>
-<url><loc>https://gen.kro.kr/lotto</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/clock</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/timer</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/aim</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/pyramid</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/cps</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/lotto</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-<url><loc>https://gen.kro.kr/watchpopup</loc><changefreq>always</changefreq><priority>0.8</priority></url>
-</urlset>
+https://gen.kro.kr/
+https://gen.kro.kr/lotto
+https://gen.kro.kr/clock
+https://gen.kro.kr/timer
+https://gen.kro.kr/aim
+https://gen.kro.kr/pyramid
+https://gen.kro.kr/cps
+https://gen.kro.kr/lotto
+https://gen.kro.kr/watchpopup
