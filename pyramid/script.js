@@ -2,8 +2,8 @@ document.getElementById("generate").disabled = "";
 document.getElementById("generateReverse").disabled = "";
 
 function generate(obj, reversed){
-    document.getElementById("generate").disabled = "true";
-    document.getElementById("generateReverse").disabled = "true";
+    //document.getElementById("generate").disabled = "true";
+    //document.getElementById("generateReverse").disabled = "true";
 
     var sentence = document.getElementById("sentence").value;
     var prefix = document.getElementById("prefix").value;
@@ -42,6 +42,6 @@ function generate(obj, reversed){
         }
     }
 
-    document.getElementById("generate").disabled = "";
-    document.getElementById("generateReverse").disabled = "";
+    //document.getElementById("generate").disabled = "";
+    //document.getElementById("generateReverse").disabled = "";
 }
