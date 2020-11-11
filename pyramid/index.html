@@ -3,6 +3,14 @@
 <html>
     <head>
         <title>피라미드 댓글 생성기</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="og:title" content="피라미드 생성기">
+        <meta name="og:description" content="피라미드를 간단하게 생성하세요.">
+        <meta name="og:url" content="https://xxpkbxx.github.io/gen/pyramid">
+        <meta name="theme-color" content="#f49555">
+        <meta name="description" content="피라미드를 간단하게 생성하세요.">
+        <meta name="keywords" content="생성기, generator, gen, 피라미드, pyramid">
+        <meta name="author" content="포켓이">
         <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Noto+Sans+KR&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <script type="text/javascript" src="script.js"></script>
@@ -17,8 +25,8 @@
             <div>
                 <input type="text" id="sentence" placeholder="문장" style="margin-top: 5px; width: 500px;" maxlength="50">
             </div>
-            <input type="button" id="generate" disabled="" value="생성" style="margin-top: 5px; width: 50px;" onclick="generate(this, false)" onmouseover="this.style['boxShadow'] = '0px 10px 10px -1px lightgray';" onmouseout="this.style['boxShadow'] = '';">
-            <input type="button" id="generateReverse" disabled="" value="삼각형 모양으로 생성" style="margin-top: 5px; width: 130px;" onclick="generate(this, true)" onmouseover="this.style['boxShadow'] = '0px 10px 10px -1px lightgray';" onmouseout="this.style['boxShadow'] = '';">
+            <input type="button" id="generate" value="생성" style="margin-top: 5px; width: 50px;" onclick="generate(this, false)" onmouseover="this.style['boxShadow'] = '0px 10px 10px -1px lightgray';" onmouseout="this.style['boxShadow'] = '';">
+            <input type="button" id="generateReverse" value="삼각형 모양으로 생성" style="margin-top: 5px; width: 130px;" onclick="generate(this, true)" onmouseover="this.style['boxShadow'] = '0px 10px 10px -1px lightgray';" onmouseout="this.style['boxShadow'] = '';">
             <div style="margin: auto; margin-top: 10px; border: thick dotted gray; width: 950px; height: 360px; overflow: scroll; text-align: left;">
                 <div style="resize: none; margin-left: 20px; margin-top: 20px; width: 860px; height: 310px;" id="generated">
                 </div>
