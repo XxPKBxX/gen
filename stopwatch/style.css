@@ -98,7 +98,7 @@ html, body {
     user-select: none;
     bottom: 0px;
     left: 50%;
-    transform: translate(-50%, -20px);
+    transform: translate(-50%, 50px);
     transition: all 0.5s;
 }
 .reset:hover {

@@ -36,6 +36,7 @@ function endtuto() {
         sec = 0;
         document.getElementsByClassName("clock")[0].innerHTML = "0:00:00";
     }, true);
+    document.getElementsByClassName("reset")[0].style.transform = "translate(-50%, -20px)";
 }
 
 var hour = 0;
