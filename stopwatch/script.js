@@ -1,5 +1,5 @@
 window.onload = function() {
-    if (document.cookie === "joined=1") {
+    if (document.cookie.split(";").includes("joined=1") || document.cookie.split(";").includes(" joined=1")) {
         document.getElementsByClassName("howtoback")[0].remove();
         endtuto();
     }
