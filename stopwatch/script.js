@@ -34,6 +34,7 @@ function endtuto() {
         hour = 0;
         min = 0;
         sec = 0;
+        startTime = null;
         document.getElementsByClassName("clock")[0].innerHTML = "0:00:00";
     }, true);
     document.getElementsByClassName("reset")[0].style.transform = "translate(-50%, -20px)";
@@ -42,6 +43,7 @@ function endtuto() {
 var hour = 0;
 var min = 0;
 var sec = 0;
+var startTime = null;
 
 var interval = null;
 function stopwatch() {
@@ -60,16 +62,27 @@ function stopwatch() {
         resetornot.style.transform = "translate(-50%, 50px)";
 
         clock.classList.add("updating");
+        startTime = new Date();
         interval = setInterval(function() {
-            sec += 1;
+            var now = new Date();
+            var ms = now - startTime;
+            console.log(ms);
+            var update = false;
 
+            if (ms % 1000 <= 10) {
+                ms = 0;
+                sec += 1;
+                update = true;
+            }
             if (sec >= 60) {
                 sec = 0;
                 min += 1;
+                update = true;
             }
             if (min >= 60) {
                 min = 0;
                 hour += 1;
+                update = true;
             }
 
             var minn = min.toString();
@@ -78,7 +91,7 @@ function stopwatch() {
             var seco = sec.toString();
             if (seco.length <= 1) seco = "0" + seco;
 
-            document.getElementsByClassName("clock")[0].innerHTML = hour.toString() + ":" + minn + ":" + seco;
-        }, 1000, true);
+            if (update === true) document.getElementsByClassName("clock")[0].innerHTML = hour.toString() + ":" + minn + ":" + seco;
+        }, 10);
     }
 }
