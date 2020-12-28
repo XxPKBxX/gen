@@ -14,7 +14,11 @@ window.onload = function() {
 }
 
 async function cd() {
+    const progress = document.getElementsByClassName("progress")[0];
+    window.addEventListener("contextmenu", norightclick, true);
     document.getElementById("acWarn").style.opacity = 0;
+    progress.style.transition = "left 2.5s linear";
+    progress.style.left = "0%";
     const countdown = document.getElementById("countdown");
     const obj = document.getElementById("start");
     const sw = document.getElementById("stopwatch");
@@ -25,6 +29,8 @@ async function cd() {
         await sleep(1000);
     }
     started = true;
+    progress.style.transition = "left 9.0s linear";
+    progress.style.left = "-100%";
     stopwatch = 0;
     acCheck = 0;
     clicks = 0;
@@ -46,10 +52,12 @@ async function cd() {
     }
     sw.innerHTML = "";
     started = false;
+    window.removeEventListener("contextmenu", norightclick, true);
     if (clicks >= 1) countdown.innerHTML = (clicks / 10) + " CPS";
     else countdown.innerHTML = "0 CPS";
     obj.removeAttribute("disabled");
 }
+function norightclick(e) {e.preventDefault();}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
