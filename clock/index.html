@@ -2,12 +2,12 @@
 <html>
     <head>
         <title>시계</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <script src="script.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="og:title" content="시계">
+        <meta name="og:title" content="시계"> 
         <meta name="og:description" content="시계입니다.">
         <meta name="og:url" content="https://xxpkbxx.github.io/gen/clock">
         <meta name="theme-color" content="#f49555">
@@ -17,7 +17,15 @@
     </head>
     <body>
         <noscript><meta http-equiv="refresh" content="0; url=/noscript.html"></noscript>
-        <p id="fullscreen" onclick="this.remove();">F11을 눌러 전체화면으로 전환해보세요!<br>이 글자는 클릭하거나 전체화면으로 전환해 없앨 수 있습니다.</p>
-        <div id="clock">00:00:00</div>
+        <div class="clockwrapper">
+            <div class="clock">
+                <span class="cl">0</span><span class="cl">0</span>
+                <span>:</span>
+                <span class="cl">0</span><span class="cl">0</span>
+                <span>:</span>
+                <span class="cl">0</span><span class="cl">0</span>
+            </div>
+            <span class="pam">AM</span>
+        </div>
     </body>
 </html>
