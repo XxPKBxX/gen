@@ -6,7 +6,8 @@ function load() {
         if (latest.getSeconds() != time.getSeconds()) {
             var hour = time.getHours();
             var pam = "AM";
-            if (hour > 12) {hour -= 12;pam = "PM";}
+            if (hour > 12) hour -= 12;
+            if (hour >= 12) pam = "PM";
             var change = [filldigit(hour), filldigit(time.getMinutes()), filldigit(time.getSeconds())];
             document.getElementsByClassName("clock")[0].innerHTML = "<span class=\"cl\">" + change.join("</span><span>:</span><span class=\"cl\">");
             document.getElementsByClassName("pam")[0].innerHTML = pam;
